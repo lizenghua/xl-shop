@@ -2,7 +2,7 @@
  * @message: 
  * @Author: lzh
  * @since: 2019-09-25 11:45:44
- * @lastTime: 2019-09-26 20:41:11
+ * @lastTime: 2019-09-27 11:01:55
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
@@ -27,7 +27,9 @@
       </van-tabbar-item>
     </van-tabbar>
 
-    <router-view />
+    <keep-alive>
+      <router-view />
+    </keep-alive>
     <!-- <transition mode="out-in">
       <router-view />
     </!-->

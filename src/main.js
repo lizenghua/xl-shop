@@ -2,7 +2,7 @@
  * @message: 入口文件
  * @Author: lzh
  * @since: 2019-09-25 11:45:44
- * @lastTime: 2019-09-26 19:05:44
+ * @lastTime: 2019-09-27 10:47:09
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  */
@@ -11,6 +11,8 @@ import App from "./App.vue";
 import router from "./router";
 import api from "./api";
 import FastClick from "fastclick";
+import Scroller from "@/components/scroller/Scroller";
+import Loading from "@/components/loading/Loading";
 if ("addEventListener" in document) {
   document.addEventListener(
     "DOMContentLoaded",
@@ -23,6 +25,8 @@ if ("addEventListener" in document) {
 Vue.config.productionTip = false;
 // 将api挂载到vue的原型上，方便api调用
 Vue.prototype.$api = api;
+Vue.component("Scroller", Scroller);
+Vue.component("Loading", Loading);
 
 // 引入全局过滤器
 import "@/utils/filters.js";

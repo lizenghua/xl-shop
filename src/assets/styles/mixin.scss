@@ -35,11 +35,18 @@
     align-items: center;
 }
 // 多行超出文本显示省略号
-@mixin text-overflow-line($var){
+@mixin text-overflow-line($number){
     display: -webkit-box;
     -webkit-box-orient:vertical;
-    -webkit-line-clamp:$var;
+    -webkit-line-clamp:$number;
     overflow:hidden;
     word-break:break-all; 
     white-space:normal;
+}
+// 根据dpr显示2x图/3x图
+@mixin bg-image($url){
+    background-image: url($url + "@2x.png");
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+        background-image: url($url + "@3x.png");
+    }
 }

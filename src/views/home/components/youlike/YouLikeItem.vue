@@ -2,18 +2,18 @@
  * @message: 
  * @Author: lzh
  * @since: 2019-09-26 17:46:15
- * @lastTime: 2019-09-26 19:06:41
+ * @lastTime: 2019-09-27 11:33:52
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
 <template>
   <div class="you-like-item">
     <div class="image">
-      <img
-        :src="product.small_image"
-        :alt="product.product_name"
-        v-lazy="product.small_image"
-      />
+      <van-image :src="product.small_image" lazy-load>
+        <template v-slot:loading>
+          <van-loading color="#07c160" size="30" />
+        </template>
+      </van-image>
     </div>
     <div class="name-text">
       {{ product.product_name }}
@@ -54,6 +54,7 @@ export default {
     width: 130px;
     height: 130px;
     margin: auto;
+    @include align-center(center);
 
     img {
       max-width: 130px;
