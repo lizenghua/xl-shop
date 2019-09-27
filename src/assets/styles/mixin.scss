@@ -1,0 +1,45 @@
+/*绝对定位*/
+@mixin abs-pos( $top: auto, $right: auto, $bottom: auto, $left: auto ){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+@mixin fix-pos( $top: auto, $right: auto, $bottom: auto, $left: auto ){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: fixed;
+}
+/*居中对齐*/
+@mixin align-center($var){
+    display:flex;
+    justify-content:$var;
+    align-items:center;
+}
+/*超出文本显示省略号
+* */
+@mixin text-overflow(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break:break-all;
+}
+@mixin flex {
+    flex: 1;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+// 多行超出文本显示省略号
+@mixin text-overflow-line($var){
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:$var;
+    overflow:hidden;
+    word-break:break-all; 
+    white-space:normal;
+}
