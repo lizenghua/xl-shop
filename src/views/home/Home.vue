@@ -2,7 +2,7 @@
  * @message: 
  * @Author: lzh
  * @since: 2019-09-25 16:47:46
- * @lastTime: 2019-09-27 18:17:39
+ * @lastTime: 2019-09-29 10:03:30
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
@@ -22,10 +22,8 @@
         <YouLike :like-list="youlikeData" />
       </div>
     </Scroller>
-    <GoTop v-show="isShowTop">
-      <a @click.prevent="handleToTop">
-        <i class="iconfont icon-huidingbu"></i>
-      </a>
+    <GoTop v-show="isShowTop" @scrollTop="handleToTop">
+      <i class="iconfont icon-huidingbu"></i>
     </GoTop>
   </div>
 </template>

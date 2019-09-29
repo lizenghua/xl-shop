@@ -2,13 +2,13 @@
  * @message: 返回顶部
  * @Author: lzh
  * @since: 2019-09-27 17:32:38
- * @lastTime: 2019-09-27 18:16:37
+ * @lastTime: 2019-09-29 10:07:12
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
 <template>
   <transition name="drop">
-    <div class="go-top">
+    <div class="go-top" @click.stop="handleScrollTop">
       <slot></slot>
     </div>
   </transition>
@@ -16,7 +16,12 @@
 
 <script>
 export default {
-  name: "GoTop"
+  name: "GoTop",
+  methods: {
+    handleScrollTop() {
+      this.$emit("scrollTop");
+    }
+  }
 };
 </script>
 
