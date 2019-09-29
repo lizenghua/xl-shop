@@ -2,7 +2,7 @@
  * @message: 
  * @Author: lzh
  * @since: 2019-09-25 16:47:46
- * @lastTime: 2019-09-29 10:03:30
+ * @lastTime: 2019-09-29 15:04:06
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
@@ -60,15 +60,14 @@ export default {
     this.listenScroll = true;
   },
   methods: {
-    _onLoadBanner() {
-      this.$api.home.getHomeBanner().then(res => {
-        if (res.success) {
-          this.bannerData = res.data.list[0].icon_list;
-          this.navData = res.data.list[2].icon_list;
-          this.youlikeData = res.data.list[12].product_list;
-          this.isLoading = false;
-        }
-      });
+    async _onLoadBanner() {
+      let res = await this.$api.home.getHomeBanner();
+      if (res.success) {
+        this.bannerData = res.data.list[0].icon_list;
+        this.navData = res.data.list[2].icon_list;
+        this.youlikeData = res.data.list[12].product_list;
+        this.isLoading = false;
+      }
     },
     scroll(pos) {
       this.scrollY = pos.y;

@@ -2,7 +2,7 @@
  * @message: 
  * @Author: lzh
  * @since: 2019-09-25 11:45:44
- * @lastTime: 2019-09-27 11:01:55
+ * @lastTime: 2019-09-29 16:05:02
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
@@ -41,8 +41,14 @@ export default {
   name: "App",
   data() {
     return {
-      active: 0
+      active: Number(sessionStorage.getItem("tabBarActiveIndex")) || 0
     };
+  },
+  watch: {
+    active(value) {
+      let tabBarActiveIndex = value > 0 ? value : 0;
+      sessionStorage.setItem("tabBarActiveIndex", tabBarActiveIndex);
+    }
   }
 };
 </script>

@@ -2,7 +2,7 @@
  * @message: 封装滑动组件better-scroll
  * @Author: lzh
  * @since: 2019-09-27 09:46:26
- * @lastTime: 2019-09-27 18:12:47
+ * @lastTime: 2019-09-29 15:39:40
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
@@ -108,6 +108,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
+  width: 100%;
   height: 100%;
 }
 </style>
