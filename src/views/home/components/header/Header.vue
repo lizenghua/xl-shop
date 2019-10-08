@@ -2,7 +2,7 @@
  * @message: 首页头部组件
  * @Author: lzh
  * @since: 2019-09-26 10:58:21
- * @lastTime: 2019-09-26 16:40:45
+ * @lastTime: 2019-09-30 11:48:27
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
@@ -11,7 +11,7 @@
     <div class="address-box">
       <i class="iconfont icon-dizhi"></i>
       <span>广州</span>
-      <i class="iconfont icon-down-fill"></i>
+      <i class="iconfont icon-down-copy-copy"></i>
     </div>
     <div class="search-box">
       <i class="iconfont icon-search"></i>
@@ -50,7 +50,7 @@ export default {
     }
     .iconfont {
       color: $icon-color;
-      font-size: 16px;
+      font-size: 24px;
     }
   }
   .search-box {
